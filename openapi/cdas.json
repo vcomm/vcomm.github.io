@@ -36,6 +36,24 @@
           "tags": [
             "dafsm"
           ],
+          "parameters": [
+            {
+              "name": "service",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "path",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],          
           "responses": {
             "200": {
               "description": "200 response",
@@ -80,6 +98,24 @@
           "tags": [
             "pnets"
           ],
+          "parameters": [
+            {
+              "name": "service",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "path",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],           
           "responses": {
             "200": {
               "description": "200 response",
