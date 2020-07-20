@@ -5,11 +5,6 @@
       "title": "CDAS API overview",
       "description": "Concurrent Distributed Applications Systems (CDAS)"
     },
-    "servers": [
-      {
-        "url": "https://vcomm.github.io/openapi/cdas.json" 
-      }
-    ],    
     "paths": {
       
       "/dafsm/version": {
