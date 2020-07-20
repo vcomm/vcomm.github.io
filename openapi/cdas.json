@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "CDAS API overview",
+      "description": "Concurrent Distributed Applications Systems (CDAS)"
+    },
+    "paths": {
+      
+      "/dafsm/version": {
+        "get": {
+          "summary": "DAFSM API versions 1.0",          
+          "operationId": "listVersions",
+          "tags": [
+            "dafsm"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/version"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+
+      "/dafsm/3rdparty/{service}/{path}": {
+        "get": {
+          "summary": "DAFSM API versions 1.0",
+          "operationId": "get3rdparty",
+          "tags": [
+            "dafsm"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/3rdparty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },      
+
+      "/pnets/version": {
+        "get": {
+          "summary": "PNETS API versions 1.0",
+          "operationId": "listVersions",
+          "tags": [
+            "pnets"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/version"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+
+      "/pnets/3rdparty/{service}/{path}": {
+        "get": {
+          "summary": "PNETS API versions 1.0",
+          "operationId": "get3rdparty",
+          "tags": [
+            "pnets"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/3rdparty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }      
+    },
+
+    "components": {
+      "schemas": {
+        "version": {
+          "type": "object",
+          "properties": {
+            "service": {
+              "type": "string"
+            }, 
+            "version": {
+              "type": "string"
+            }                      
+          }          
+        },
+        "3rdparty": {
+          "type": "object",
+          "properties": {
+            "service": {
+              "type": "string"
+            }, 
+            "responce": {
+              "type": "string"
+            }             
+          }          
+        }  
+      }
+    }
+  }
