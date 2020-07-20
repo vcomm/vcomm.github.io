@@ -1,2 +1,2 @@
 # vcomm.github.io
-Concurrent Distributed Applications Systems
+Concurrent Distributed Systems Provisioning
