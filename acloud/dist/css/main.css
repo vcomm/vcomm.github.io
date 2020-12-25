@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+#navi {
+  background-color: #f0f0f0;	
+  border: 2px solid #aaa;
+}
+
+#myInput {
+  background-image: url('../images/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 90%;   
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid #bbb;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  font-family:Verdana;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 2px solid #aaa;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+#myTable tr:hover:not(.header) {
+    background-color: #ddd; /* Add a hover effect to all links, except for headers */
+	border: 2px solid #aaa;
+}
+
+ul li:hover {
+  color:red;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 250px;
+    top: 80px;
+    width: 800px; /* Full width */
+    height: 500px; /* Full height */
+    overflow: hidden; /* Disable scroll */
+	background: #39454b;
+	/*
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}	
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#heading {
+  background-color: #39454b;
+  padding: 20px;
+  color: #BDBDBD;  
+  text-align: center;
+  margin-bottom: 5px;
+  border: 2px solid black;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  margin-top: 5px;
+  width: 99%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+#footer {
+	position: relative;
+	height: 10em;
+	line-height: 5em;
+	margin: 0;
+	background: #39454b;
+	color: #999;
+	color: rgba(185,186,187,0.5);
+	overflow: hidden;
+	border: 2px solid black;
+}
+
+	#footer .menu {
+		position: absolute;
+		right: 2em;
+		top: 0;
+		height: 10em;
+		line-height: 10em;
+		margin: 0;
+	}
+
+		#footer .menu li {
+			font-size: 1.25em;
+			display: inline-block;
+			line-height: 1em;
+			border-left: solid 1px rgba(145,146,147,0.25);
+			padding: 0 0 0 0.5em;
+			margin: 0 0 0 0.5em;
+		}
+
+/**********************************************/
+.tooltiptexthide {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltiptextshow {
+	visibility: visible;
+    max-width: 350px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 1;
+    top: 500px;
+    left: 500px;
+	margin-top :  8px;
+    margin-left:  15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;	
+}
+
+.container {
+    cursor: pointer;
+	display: inline-block;    
+	position: absolute;
+	margin-right: 10px;
+	margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;	
+}
+
+.bar1, .bar2, .bar3 {
+    top: 10px;
+    width: 35px;
+    height: 5px;
+    background-color: #666;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;    
+	top: 210px;
+    left: 8px;
+	background-color: #39454b;
+	color: #BDBDBD;
+    overflow-x: hidden;
+    transition: 0.8s;
+    padding-top: 100px;
+	font-family:Verdana;
+	opacity: 0.9;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Start Raiting */
+.rating label {
+    position: relative;
+    display: inline;
+    float: left;
+    z-index:1;
+    width:5px;
+    height:16px;
+}
+.rating input[type=radio] {
+    z-index: 2;
+    display:inline;
+    float: left;
+    width:16px;
+    height:16px;
+}
+.star {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAwCAMAAADAQ2FbAAAAAXNSR0IArs4c6QAAALFQTFRF/////f7//1UA+Pv+/P3+9fj9xM/d/6UA8fb8y9Xi5eft/4cA5uz0/P7/6/P83OPr69PL197n8PP2/5YA7e3w/v//77OS/7UA+Pn7+vv+4sW8vMjX/msD/8AA9VEA7Itd94tC95pC693c36eQ9Z5j/3gA+Ycq+psl+3Ub3WYv/I4Q8LN95ZJt6XI64Lms8E8A7WIg8VkP9O/u431N35t9/ZYR+fHu77+l/aMQ/GYR+PX1nwS4LAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfbCAsIKx+mNyuoAAABpElEQVQoz2WS13qjMBCFkTSqiGo6GBdcEzs9297/wRYBIstmuOH7OaOZc5DjjIWQsyyklbckhDGyUCHBpE4XEqmUpPYzEEJ9qRPpU0IADSfUjEVxXDDZPxr6BhYFKomLsohVJEnfRQI5EhpH0TCwR0zpOP4TB9G0QUp7kU6ShNlpDjUnKa2ksMSvo4jVQcB8ZD3147UvpYwmb56sA4o8EtQMrIaS1CxPY/RPNt/zCUNYEjjs6DKf5GG1XxCScf4450OoEPrM819aCGqMwWa7Pbk8X6/5ebc7/ACnDJujuzJkzfnDTy91kBdeesLzPOef4RiHp04GcX7e239GM9dd9fX4lc/26Jra2XyQf2ma09Y9NnM+e/w7EyK7NLO3bJMUKCXJIbOashzegBRzPsbL238BQdct80np/UUsRBC2uCrntAA8f4PxuwAwl8UBsa+q7hXjtquqUEDqkOsznqu9vqUOmA5bd2XaPHGzYENhcvoxgnffm+4r/bASO1/czaEYX+2S4D/j1+7pBbfKeq/amyJE3dqniXhhRQf7YWWtjcv3bJj0F1myHFtkBXYZAAAAAElFTkSuQmCC) 0 -16px;
+    height:16px;
+    width:16px;
+    z-index:1;
+    position: absolute;
+    top: 0;
+    display:block;
+    cursor:pointer;
+    left: -16px;
+}
+.rating:hover .star {
+    background-position: 0 -32px;
+}
+input:checked ~ label .star {
+    background-position: 0 0;
+}
+input:checked + label .star {
+    background-position: 0 -16px;
+}
+label:hover ~ label .star {
+    background-position: 0 0 !important;
+}
+/* End Raiting*/

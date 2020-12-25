@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Computing Navigator</title>
+<link rel="shortcut icon" href="images/eyes-on.png" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="resource-type" content="document" />
+<meta name="audience" content="all" />
+<meta name="distribution" content="global" />
+<meta name="google-site-verification" content="NA" />
+<meta name="msvalidate.01" content="na" />
+<meta name="robots" content="INDEX, FOLLOW" />
+<meta name="revisit-after" content="10 days" />
+<meta name="description" content="Cloud Computing Navigation and Expertise" />
+<meta name="keywords" content="OPENSTACK, AWS, AZURE, GCP, Cloud, Expertise" />
+<link rel="stylesheet" href="css/main.css" />  
+</head>
+<body onscroll="onScroll()">
+<div id="app"></div>
+ <!-- Header -->
+<header id="heading">
+  <!-- Logo -->
+<img id="logo" src="images/logo.jpg" style="position: absolute;left: 15px;top: 15px;opacity: 0.90;">
+<h1 id="title" >Cloud Computing Navigator</h1>
+</header>
+<!--
+<div id="mySidenav" class="sidenav" style="width: 0px;">
+  <a href="#"><b>COMPARE</b></a>
+  <a href="comingsoon.html"><b>VOTING</b></a>
+  <a href="comingsoon.html"><b>RATING</b></a>
+  <a href="http://cloudexpertise.blogspot.co.il/"><b>BLOG</b></a>
+</div>
+-->
+<div id="navi">
+<!--<div class="container" onclick="openNav(this)" contextmenu="mymenu">
+<div class="container" contextmenu="mymenu">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>-->
+<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search by cloud category..">
+</div>
+
+<table id="myTable" style="width:100%;">
+  <tr class="header">
+    <th style="width:10%;"><h3>CATEGORY</h3></th>
+    <th style="text-align: center; "><img src="images/openstack.jpg" style="width:128px;height:110px;border: 2px solid #bbb;"></th>
+	<th style="text-align: center;"><img src="images/aws.png" style="width:128px;height:110px;border: 2px solid #bbb;"></th>
+	<th style="text-align: center;"><img src="images/azure.png" style="width:128px;height:110px;border: 2px solid #bbb;"></th>
+	<th style="text-align: center;"><img src="images/gcp.png" style="width:128px;height:110px;border: 2px solid #bbb;"></th>
+  </tr>
+  <tr>
+    <td><h3>Compute</h3></td>
+    <td>
+	<ul>
+	  <li title="Computer Service" dir="https://www.openstack.org/software/releases/ocata/components/nova" onmouseenter="showTitle(this)" onmouseleave="hideTitle(this)">NOVA</li>
+	  <li title="Image Service" dir="https://www.openstack.org/software/releases/ocata/components/glance">GLANCE</li>
+	  <li title="Bare Metal Provisioning Service" dir="https://www.openstack.org/software/releases/ocata/components/ironic">IRONIC</li>
+	  <li title="Computable Object Store" dir="https://www.openstack.org/software/releases/ocata/components/storlets">STORLETS</li>
+	  <li title="Container Management Service" dir="https://www.openstack.org/software/releases/ocata/components/zun">ZUN</li>
+	</ul>
+	</td>
+	<td>
+	<ul>
+	  <li title="Virtual Servers in the Cloud" dir="https://aws.amazon.com/ec2/">Amazon EC2</li>
+	  <li title="Store and Retrieve Docker Images" dir="https://aws.amazon.com/ecr/">Amazon EC2 Container Registry</li>
+	  <li title="Run and Manage Docker Containers" dir="https://aws.amazon.com/ecs/">Amazon EC2 Container Service</li>
+	  <li title="Launch and Manage Virtual Private Servers" dir="https://amazonlightsail.com/">Amazon Lightsail</li>
+	  <li title="Run Batch Jobs at Any Scale" dir="https://aws.amazon.com/batch/">Amazon Batch</li>
+	  <li title="Run and Manage Web Apps" dir="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</li>
+	  <li title="Run Your Code in Response to Events" dir="https://aws.amazon.com/lambda/">AWS Lambda</li>
+	</ul>	
+	</td>
+	<td>
+	<ul>
+	  <li title="Linux and Windows virtual machines" dir="https://azure.microsoft.com/en-us/services/virtual-machines/">Virtual Machines</li>
+	  <li title="Manage and Scale Linux and Windows virtual machines" dir="https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/">Virtual Machine Scale Sets</li>
+	  <li title="Process events with serverless code" dir="https://azure.microsoft.com/en-us/services/functions/">Functions</li>
+	  <li title="Scale and orchestrate container using Kubernetes, DC/OS or Docker Swarm" dir="https://azure.microsoft.com/en-us/services/container-service/">Container Service</li>
+	  <li title="Easily run containers with a single command" dir="https://azure.microsoft.com/en-us/services/container-instances/">Container Instances</li>
+	  <li title="Cloud scale job scheduling & compute management" dir="https://azure.microsoft.com/en-us/services/batch/" >Batch</li>
+	  <li title="Develop and orchestrate containers on Windows or Linus" dir="https://azure.microsoft.com/en-us/services/service-fabric/">Service Fabric</li>
+	  <li title="Removes the need to manage server infrastructure. With web and worker roles, it lets you quickly build, deploy, and manage modern applications" dir="https://azure.microsoft.com/en-us/services/cloud-services/">Cloud Services</li>
+	  <li title="Provide up to 72 percent cost savings over pay-as-you-go pricing, and up to 82 percent savings when combined with Azure Hybrid Benefit" dir="https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/">Reserved Virtual Machine Instances</li>	  
+	</ul>		
+	</td>
+	<td>
+	<ul>
+	  <li title="Scalable, High-Performance Virtual Machines" dir="https://cloud.google.com/compute/" onmouseenter="showTitle(this)" onmouseleave="hideTitle(this)">COMPUTE ENGINE</li>
+	  <li title="Build scalable web and mobile backends in any language on Google’s infrastructure" dir="https://cloud.google.com/appengine/" >APP ENGINE</li>
+	  <li title="Deploy, manage, and scale containerized applications, powered by Kubernetes" dir="https://cloud.google.com/container-engine/">CONTAINER ENGINE</li>
+	  <li title="A serverless environment to build and connect cloud services" dir="https://cloud.google.com/functions/">CLOUD FUNCTIONS</li>
+	</ul>		
+	</td>	
+  </tr>
+  <tr>
+    <td><h3>Storage</h3></td>
+    <td>
+	<ul>
+	  <li title="Object Storage" dir="https://www.openstack.org/software/releases/ocata/components/swift">SWIFT</li>
+	  <li title="Block Storage" dir="https://www.openstack.org/software/releases/ocata/components/cinder">CINDER</li>
+	  <li title="Shared Filesystems" dir="https://www.openstack.org/software/releases/ocata/components/manila">MANILA</li>
+	  <li title="Application Data Protection as a Service" dir="https://www.openstack.org/software/releases/ocata/components/karbor">KARBOR</li>
+	  <li title="Backup, Restore and Disaster Recovery" dir="https://www.openstack.org/software/releases/ocata/components/freezer">FREEZER</li>
+	</ul>	
+	</td>
+	<td>
+	<ul>
+	  <li title="Scalable Storage in the Cloud" dir="https://aws.amazon.com/s3/">Amazon S3</li>
+	  <li title="Block Storage for EC2" dir="https://aws.amazon.com/ebs/">Amazon EBS</li>
+	  <li title="Managed File Storage for EC2" dir="https://aws.amazon.com/efs/">Amazon Elastic File System</li>
+	  <li title="Low-cost Archive Storage in the Cloud" dir="https://aws.amazon.com/glacier/">Amazon Glacier</li>
+	  <li title="Hybrid Storage Integration" dir="https://aws.amazon.com/storagegateway/">Amazon Storage Gateway</li>
+	  <li title="Petabyte-scale Data Transport" dir="https://aws.amazon.com/snowball/">AWS Snowball</li>
+	  <li title="Petabyte-scale Data Transport with On-board Compute" dir="https://aws.amazon.com/snowball-edge/">AWS Snowball Edge</li>
+	  <li title="Extra-scale Data Transport" dir="https://aws.amazon.com/snowmobile/">AWS Snowmobile</li>
+	</ul>	
+	</td>	
+	<td>
+	<ul>
+	  <li title="Offers non-relational data storage including Blob Storage, Table Storage, Queue Storage, and Files" dir="https://azure.microsoft.com/en-us/services/storage/">Storage</li>
+	  <li title="REST-based object storage for unstructured data" dir="https://azure.microsoft.com/en-us/services/storage/blobs/">Blob storage</li>
+	  <li title="A feature of Storage.Effectively scale apps according to traffic" dir="https://azure.microsoft.com/en-us/services/storage/queues/">Queue Storage</li>
+	  <li title="A feature of Storage.File shares that use the standard SMB 3.0 protocol" dir="https://azure.microsoft.com/en-us/services/storage/files/">File Storage</li>
+	  <li title="A feature of Storage.Persistent, secured disk options supporting virtual machines" dir="https://azure.microsoft.com/en-us/services/storage/unmanaged-disks/">Disk Storage</li>
+	  <li title="Hyperscale repository for big data analytic workloads" dir="https://azure.microsoft.com/en-us/services/data-lake-store/">Data Lake Store</li>
+	  <li title="Lower cost with a enterprise hybrid cloud storage solution" dir="https://azure.microsoft.com/en-us/services/storsimple/">StorSimple</li>	  
+	  <li title="Reliable server backup to the cloud" dir="https://azure.microsoft.com/en-us/services/backup/">Backup</li>	  
+	  <li title="Orchestrate protection and recovery of private cloud" dir="https://azure.microsoft.com/en-us/services/site-recovery/">Site Recovery</li>	  	  
+	</ul>
+	</td>
+	<td>
+	<ul>
+	  <li title="Best in class performance, reliability, and pricing for all your storage needs" dir="https://cloud.google.com/storage/">CLOUD STORAGE</li>
+	  <li title="Reliable, high-performance block storage for virtual machine instances" dir="https://cloud.google.com/persistent-disk/">PERSISTENT DISK</li>
+	  <li title="Rack, capture and then ship your data to Google Cloud" dir="https://cloud.google.com/transfer-appliance/">TRANSFER APPLIANCE</li>
+	  <li title="Quickly import online data into Google Cloud Storage" dir="https://cloud.google.com/storage/transfer/">STORAGE TRANSFER SERVICES</li>
+	</ul>
+	</td>
+  </tr>
+  <tr>
+    <td><h3>Networking</h3></td>
+    <td>
+	<ul>
+	  <li title="Networking" dir="https://www.openstack.org/software/releases/ocata/components/neutron">NEUTRON</li>
+	  <li title="DNS Service" dir="https://www.openstack.org/software/releases/ocata/components/designate">DESIGNATE</li>
+	  <li title="Neutron plugin" dir="https://www.openstack.org/software/releases/ocata/components/dragonflow">DRAGONFLOW</li>
+	  <li title="Container plugin" dir="https://www.openstack.org/software/releases/ocata/components/kuryr">KURYR</li>
+	  <li title="NFV Orchestration" dir="https://www.openstack.org/software/releases/ocata/components/tacker">TACKER</li>
+	  <li title="Networking Automation for Multi-Region Deployments" dir="https://www.openstack.org/software/releases/ocata/components/tricircle">TRICIRCLE</li>
+	</ul>	
+	</td>
+    <td>
+	<ul>
+	  <li title="Isolated Virtual Private Cloud" dir="https://aws.amazon.com/vpc/">Amazon VPC</li>
+	  <li title="Global Content Delivery Network" dir="https://aws.amazon.com/cloudfront/">Amazon CloudFront</li>
+	  <li title="Scalable Domain Name System" dir="https://aws.amazon.com/route53/">Amazon Route 53</li>
+	  <li title="Dedicated Network Connection to AWS" dir="https://aws.amazon.com/directconnect/">AWS Direct Connect</li>
+	</ul>	
+	</td>	
+    <td>
+	<ul>
+	  <li title="Provision private networks" dir="https://azure.microsoft.com/en-us/services/virtual-network/">Virtual Network</li>
+	  <li title="Built-in load balancing for cloud services and virtual machines" dir="https://azure.microsoft.com/en-us/services/load-balancer/">Load Balancer</li>
+	  <li title="Scalable, highly-available web application delivery" dir="https://azure.microsoft.com/en-us/services/application-gateway/">Application Gateway</li>
+	  <li title="Establish secure, cross-premises connections between your virtual network within Azure and on-premises IT infrastructure" dir="https://azure.microsoft.com/en-us/services/vpn-gateway/">VPN Gateway</li>
+	  <li title="Host your DNS domains in Azure" dir="https://azure.microsoft.com/en-us/services/dns/">Azure DNS</li>
+	  <li title="Ensure secure, reliable content delivery with broad global reach" dir="https://azure.microsoft.com/en-us/services/cdn/">Content Delivery Network</li>
+	  <li title="Route incoming traffic across multiple hosted Azure services for high performance and availability" dir="https://azure.microsoft.com/en-us/services/traffic-manager/">Traffic Manager</li>
+	  <li title="Dedicated private network fiber connection to Azure" dir="https://azure.microsoft.com/en-us/services/expressroute/">ExpressRoute</li>
+	  <li title="Protect your application from DDoS attacks" dir="https://azure.microsoft.com/en-us/services/ddos-protection/">Azure DDoS Protection</li>
+	  <li title="Network performance monitoring and diagnostics" dir="https://azure.microsoft.com/en-us/services/network-watcher/">Network Watcher</li>
+	</ul>	
+	</td>	
+    <td>
+	<ul>
+	  <li title="Managed networking functionality for your Cloud Platform resources" dir="https://cloud.google.com/vpc/">VIRTUAL PRIVATE CLOUD (VPC)</li>
+	  <li title="High performance, scalable load balancing on Google Cloud Platform" dir="https://cloud.google.com/load-balancing/">GOOGLE CLOUD LOAD BALANCING</li>
+	  <li title="Low-latency, low-cost content delivery using Google's global network" dir="https://cloud.google.com/cdn/">CLOUD CDN</li>
+	  <li title="Options to connect your infrastructure to Google Cloud Platform (GCP)" dir="https://cloud.google.com/interconnect/">CLOUD INTERCONNECT</li>
+	  <li title="Reliable, resilient, low-latency DNS serving from Google’s worldwide network" dir="https://cloud.google.com/dns/">CLOUD DNS</li>
+	  <li title="Optimize your network for performance or cost" dir="https://cloud.google.com/network-tiers/">NETWORK SERVICE TIERS</li>
+	</ul>	
+	</td>		
+  </tr>
+  <tr>
+    <td><h3>Database</h3></td>
+    <td>
+	<ul>
+	  <li title="Database as a Service" dir="https://www.openstack.org/software/releases/ocata/components/trove">TROVE</li>
+	  <li title="Indexing and Search" dir="https://www.openstack.org/software/releases/ocata/components/searchlight">SEARCHLIGHT</li>
+	</ul>	
+	</td>
+    <td>
+	<ul>
+	  <li title="High Performance Managed Relational Database" dir="https://aws.amazon.com/rds/aurora/">Amazon Aurora</li>
+	  <li title="Managed Relational Database Service for MySQL, PostgreSQL, Oracle, SQL Server and MariaDB" dir="https://aws.amazon.com/rds/">Amazon RDS</li>
+	  <li title="Managed NoSQL Database" dir="https://aws.amazon.com/dynamodb/">Amazon DinamoDB</li>
+	  <li title="Fully Managed In-Memory Cache for DinamoDB" dir="https://aws.amazon.com/dynamodb/dax/">Amazon DinamoDB Accelerator (DAX)</li>
+	  <li title="In-Memory Caching System" dir="https://aws.amazon.com/elasticache/">Amazon ElactiCache</li>
+	  <li title="Fast, Simple, Cost-Effective Data Warehousing" dir="https://aws.amazon.com/redshift/">Amazon Redshift</li>
+	  <li title="Migrate Database with Minimal Downtime" dir="https://aws.amazon.com/dms/">AWS Database Migration Service</li>
+	</ul>	
+	</td>	
+    <td>
+	<ul>
+	  <li title="Relational SQL Database as a service" dir="https://azure.microsoft.com/en-us/services/sql-database/">SQL Database</li>
+	  <li title="MySQL database service for app development" dir="https://azure.microsoft.com/en-us/services/mysql/">Azure Database for MySQL</li>
+	  <li title="PostgreSQL database service for app development" dir="https://azure.microsoft.com/en-us/services/postgresql/">Azure Database for PostgreSQL</li>
+	  <li title="Elastic data warehouse as a service with enterprise-grade features based on the massively parallel SQL Server processing architecture" dir="https://azure.microsoft.com/en-us/services/sql-data-warehouse/">SQL Data Warehouse</li>
+	  <li title="Fully-managed NoSQL document database service" dir="https://azure.microsoft.com/en-us/services/cosmos-db/">Azure Cosmos DB</li>
+	  <li title="High-throughput dedicated cache for your Azure applications" dir="https://azure.microsoft.com/en-us/services/cache/">Redis Cache</li>
+	  <li title="Dynamically stretch warm and cold transactional data from Microsoft SQL Server to Azure" dir="https://azure.microsoft.com/en-us/services/sql-server-stretch-database/">SQL Server Stretch Database</li>
+	  <li title="Orchestrate and manage data transformation and movement" dir="https://azure.microsoft.com/en-us/services/data-factory/">Data Factory V1</li>
+	</ul>	
+	</td>		
+    <td>
+	<ul>
+	  <li title="MySQL and PostgreSQL database service" dir="https://cloud.google.com/sql/">CLOUD SQL</li>
+	  <li title="A high performance NoSQL database service for large analytical and operational workloads" dir="https://cloud.google.com/bigtable/">CLOUD BIGTABLE</li>
+	  <li title="The first horizontally scalable, strongly consistent, relational database service" dir="https://cloud.google.com/spanner/">CLOUD SPANNER</li>	
+	  <li title="Cloud Datastore is a highly-scalable NoSQL database for your web and mobile applications" dir="https://cloud.google.com/datastore/">CLOUD DATASTORE</li>
+	</ul>	
+	</td>			
+  </tr>
+  <tr>
+    <td><h3>Monitoring</h3></td>
+    <td>
+	<ul>
+	  <li title="Metering & Data Collection Service" dir="https://www.openstack.org/software/releases/ocata/components/ceilometer">CELIOMETER</li>
+	  <li title="Monitoring" dir="https://www.openstack.org/software/releases/ocata/components/monasca">MONASCA</li>
+	  <li title="Billing and chargebacks" dir="https://www.openstack.org/software/releases/ocata/components/cloudkitty">CLOUDKITTY</li>
+	  <li title="Alarming Service" dir="https://www.openstack.org/software/releases/ocata/components/aodh">AODH</li>
+	  <li title="Event, Metadata Indexing Service" dir="https://www.openstack.org/software/releases/ocata/components/panko">PANKO</li>
+	</ul>
+	</td>
+    <td>
+	<ul>
+	  <li title="Monitor Resource and Application" dir="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</li>
+	  <li title="Monitor Resource and Application" dir="https://aws.amazon.com/premiumsupport/phd/">Amazon Personal Health Dashboard</li>
+	</ul>
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Network performance monitoring and diagnostics" dir="https://azure.microsoft.com/en-us/services/network-watcher/">Network Watcher</li>
+	  <li title="Highly granular and real-time monitoring data for any Azure resource" dir="https://azure.microsoft.com/en-us/services/monitor/">Azure Monitor</li>
+	  <li title="Receive telemetry from millions of devices" dir="https://azure.microsoft.com/en-us/services/event-hubs/">Event Hubs</li>	  
+	</ul>		
+	</td>		
+    <td>
+	<ul>	
+	  <li title="Monitoring, logging, and diagnostics for applications on Cloud Platform and AWS" dir="https://cloud.google.com/stackdriver/">GOOGLE STACKDRIVER</li>
+	  <li title="For applications running on Google Cloud Platform and Amazon Web Services" dir="https://cloud.google.com/monitoring/">STACKDRIVER MONITORING</li>
+	</ul>		
+	</td>			
+  </tr>
+  <tr>
+    <td><h3>Security</h3></td>
+    <td>
+	<ul>	  
+	  <li title="Governance" dir="https://www.openstack.org/software/releases/ocata/components/congress">CONGRESS</li>
+	  <li title="Workflow Service" dir="https://www.openstack.org/software/releases/ocata/components/mistral">MISTRAL</li>
+	</ul>		
+	</td>
+    <td>
+	<ul>
+	  <li title="Build flexible cloud-native directories" dir="https://aws.amazon.com/cloud-directory/">Amazon Cloud Directory</li>
+	  <li title="Analysis Application Security" dir="https://aws.amazon.com/inspector/">Amazon Inspector</li>
+	  <li title="Discover, classify, and protect sensitive data" dir="https://aws.amazon.com/macie/">Amazon Macie</li>
+	  <li title="Provision, manage, and deploy SSL/TLS certificates" dir="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</li>
+	  <li title="Hardware based keys storage for Regulatory Compliance" dir="https://aws.amazon.com/cloudhsm/">AWS CloudHSM</li>
+	  <li title="Managed Microsoft Active Directory" dir="https://aws.amazon.com/directoryservice/">AWS Directory Service</li>
+	  <li title="Managed DDoS Protection" dir="https://aws.amazon.com/shield/">AWS Shield</li>
+	  <li title="Web Application Firewall" dir="https://aws.amazon.com/waf/">AWS WAF</li>
+	</ul>		
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Protect your application from DDoS attacks" dir="https://azure.microsoft.com/en-us/services/ddos-protection/">Azure DDoS Protection</li>
+	  <li title="Enable threat detection and prevention through advanced cloud security" dir="https://azure.microsoft.com/en-us/services/security-compliance/">Security & Compliance</li>
+	  <li title="Unify security management and enable advanced threat protection across hybrid cloud workloads" dir="https://azure.microsoft.com/en-us/services/security-center/">Security Center</li>
+	  <li title="Your domain controller as a service" dir="https://azure.microsoft.com/en-us/services/active-directory-ds/">Azure Active Directory Domain Services</li>		
+	</ul>		
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Deploy on an infrastructure protected by top experts in information, application, and network security" dir="https://cloud.google.com/security/">GOOGLE CLOUD PLATFORM SECURITY</li>
+	  <li title="Fine-grained access control and visibility for centrally managing cloud resources" dir="https://cloud.google.com/iam/">CLOUD IDENTITY & ACCESS MANAGEMENT</li>
+	  <li title="Automatically scan your App Engine apps for common vulnerabilities" dir="https://cloud.google.com/security-scanner/">CLOUD SECURITY SCANNER</li>
+	  <li title="Hierarchically manage resources by project, folder, and organization" dir="https://cloud.google.com/resource-manager/">CLOUD RESOURCE MANAGER</li>
+	  <li title="Use identity to guard access for applications deployed on GCP" dir="https://cloud.google.com/iap/">CLOUD IDENTITY-AWARE PROXY</li>
+	  <li title="Automatically discover and redact sensitive data everywhere" dir="https://cloud.google.com/dlp/">DATA LOSS PREVENTION API</li>
+	</ul>		
+	</td>		
+  </tr>
+  <tr>
+    <td><h3>Identity</h3></td>
+    <td>
+	<ul>
+	  <li title="Indentity Service" dir="https://www.openstack.org/software/releases/ocata/components/keystone">KEYSTONE</li>
+ 	  <li title="Key Management" dir="https://www.openstack.org/software/releases/ocata/components/barbican">BARBICAN</li>	  
+	</ul>		
+	</td>
+    <td>
+	<ul>
+	  <li title="Manage User Access and Encryption Keys" dir="https://aws.amazon.com/iam/">AWS Identity & Access Management</li>
+	  <li title="Managed Creation and Control of Encryption Keys" dir="https://aws.amazon.com/kms/">AWS Key Management Service</li>
+	  <li title="Policy-based management for multiple AWS accounts" dir="https://aws.amazon.com/organizations/">AWS Organizations</li>	  
+	  <li title="User Identity & App Data Sync" dir="https://aws.amazon.com/cognito/">Amazon Cognito</li>
+	</ul>		
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Safeguard and maintain control of keys and other secrets" dir="https://azure.microsoft.com/en-us/services/key-vault/">Key Vault</li>
+	  <li title="Identity management and access control for your cloud applications" dir="https://azure.microsoft.com/en-us/services/active-directory/">Azure Active Directory</li>
+	  <li title="Consumer Identity and access management in the cloud" dir="https://azure.microsoft.com/en-us/services/active-directory-b2c/">Azure Active Directory B2C</li>
+	  <li title="More security for your data and applications—without added hassles for your customers" dir="https://azure.microsoft.com/en-us/services/multi-factor-authentication/">Multi-Factor Authentication</li>	  
+	</ul>		
+	</td>		
+    <td>
+	<ul>	
+	  <li title="Enforce the use of security keys to help deter phishing" dir="https://cloud.google.com/security-key/">SECURITY KEY ENFORCEMENT</li>
+	  <li title="Manage encryption keys on Google Cloud Platform" dir="https://cloud.google.com/kms/">CLOUD KEY MANAGEMENT SERVICE</li>
+	</ul>		
+	</td>			
+  </tr>
+  <tr>
+    <td><h3>Orchestration</h3></td>
+    <td>
+	<ul>
+	  <li title="Orchestration" dir="https://www.openstack.org/software/releases/ocata/components/heat">HEAT</li>
+	  <li title="Container Orchestration Engine Provisioning" dir="https://www.openstack.org/software/releases/ocata/components/magnum">MAGNUM</li>	
+	  <li title="Load Balancer" dir="https://www.openstack.org/software/releases/ocata/components/octavia">OCTAVIA</li>	  
+	</ul>
+	</td>
+    <td>
+	<ul>
+	  <li title="Automatic Elasticity" dir="https://aws.amazon.com/autoscaling/">Auto Scaling</li>	
+	  <li title="High Scale Load Balancing" dir="https://aws.amazon.com/elasticloadbalancing/">Elastic Load Balancing</li>
+	  <li title="Create and Manage Resources with Templates" dir="https://aws.amazon.com/cloudformation/">AWS CloudFormation</li>
+	  <li title="Orchestration Service for Periodic, Data-Driven Workflows" dir="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</li>
+	</ul>	
+	</td>	
+	<td>
+	<ul>
+	  <li title="Scale and orchestrate container using Kubernetes, DC/OS or Docker Swarm" dir="https://azure.microsoft.com/en-us/services/container-service/">Container Service</li>
+	  <li title="Develop and orchestrate containers on Windows or Linus" dir="https://azure.microsoft.com/en-us/services/service-fabric/">Service Fabric</li>	  
+  	  <li title="Built-in load balancing for cloud services and virtual machines" dir="https://azure.microsoft.com/en-us/services/load-balancer/">Load Balancer</li>
+    </ul>
+	</td>	
+	<td>	
+	<ul>	
+	  <li title="High performance, scalable load balancing on Google Cloud Platform" dir="https://cloud.google.com/load-balancing/">GOOGLE CLOUD LOAD BALANCING</li>	  
+	</ul>	
+	</td>		  			
+  </tr>
+  <tr>
+    <td><h3>Messaging</h3></td>
+    <td>
+	<ul>
+	  <li title="Messaging Service" dir="https://www.openstack.org/software/releases/ocata/components/zaqar">ZAQAR</li>
+	</ul>	
+	</td>
+    <td>
+	<ul>
+	  <li title="Fully managed message queuing service" dir="https://aws.amazon.com/sqs/">Amazon Simple Queue Service (SQS)</li>
+	  <li title="Pub/Sub, Mobile Push ans SMS" dir="https://aws.amazon.com/sns/">Amazon Simple Notification Service (SNS)</li>
+	  <li title="Email Sending and Receiving" dir="https://aws.amazon.com/ses/">Amazon Simple Email Service</li>
+	</ul>	
+	</td>	
+	<td>	
+	<ul>	
+	  <li title="Messaging infrastructure across private and public cloud environment" dir="https://azure.microsoft.com/en-us/services/service-bus/">Service Bus</li>
+	  <li title="Scalable, push notification engine for quickly sending millions of messages" dir="https://azure.microsoft.com/en-us/services/notification-hubs/">Notification Hubs</li>
+	</ul>	
+	</td>		  	
+	<td>	
+	<ul>	
+	  <li title="......">....</li>
+	</ul>	
+	</td>		  		
+  </tr>
+  <tr>
+    <td><h3>Management</h3></td>
+    <td>
+	<ul>
+	  <li title="Dashboard" dir="https://www.openstack.org/software/releases/ocata/components/horizon">HORIZON</li>
+	  <li title="Command line interface" dir="https://www.openstack.org/software/releases/ocata/components/openstack-client-(cli)">CLIENT CLI</li>
+	  <li title="Benchmark Service" dir="https://www.openstack.org/software/releases/ocata/components/rally">RALLY</li>
+	  <li title="Optimization Service" dir="https://www.openstack.org/software/releases/ocata/components/watcher">WATCHER</li>
+	  <li title="Root Cause Analysis Service" dir="https://www.openstack.org/software/releases/ocata/components/vitrage">VITRAGE</li>
+	  <li title="Clustering Service" dir="https://www.openstack.org/software/releases/ocata/components/senlin">SENLIN</li>
+	  <li title="Software Development Lifecycle Automation" dir="https://www.openstack.org/software/releases/ocata/components/solum">SOLUM</li>	  	  
+	</ul>		
+	</td>
+    <td>
+	<ul>
+	  <li title="Configure and manage EC2 Instance and on-premises servers" dir="https://aws.amazon.com/ec2/systems-manager/">Amazon EC2 Systems Manager</li>
+	  <li title="Command Line Interface (CLI)" dir="https://aws.amazon.com/cli/">AWS Command Line Interface</li>
+	  <li title="Track user activity and API usage" dir="https://aws.amazon.com/cloudtrail/">AWS CloudTrail</li>
+	  <li title="Track Resource Inventory and Change" dir="https://aws.amazon.com/config/">AWS Config</li>
+	  <li title="Optimize Performance and Security" dir="https://aws.amazon.com/premiumsupport/trustedadvisor/">AWS Trusted Advisor</li>
+	  <li title="Monitor Resource and Application" dir="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</li>
+	  <li title="Monitor Resource and Application" dir="https://aws.amazon.com/premiumsupport/phd/">Amazon Personal Health Dashboard</li>	  
+	</ul>	
+	</td>	
+	<td>	
+	<ul>		
+	  <li title="Cloud scale job scheduling & compute management" dir="https://azure.microsoft.com/en-us/services/batch/">Batch</li>	
+	  <li title="Route incoming traffic across multiple hosted Azure services for high performance and availability" dir="https://azure.microsoft.com/en-us/services/traffic-manager/">Traffic Manager</li>	  
+	  <li title="Analyzes your Azure resource configuration and usage telemetry" dir="https://azure.microsoft.com/en-us/services/advisor/">Azure Advisor</li>
+	  <li title="Build, manage, and monitor all Azure products in a single, unified console" dir="https://azure.microsoft.com/en-us/features/azure-portal/">Microsoft Azure portal</li>
+	  <li title="Simplify how you manage your app resources" dir="https://azure.microsoft.com/en-us/features/resource-manager/">Azure Resource Manager</li>	
+	  <li title="Detect, triage, and diagnose issues in your web apps and services" dir="https://azure.microsoft.com/en-us/services/application-insights/">Application Insights</li>
+	  <li title="Collect, correlate and visualize all your machine data, such as event logs, network logs, performance data" dir="https://azure.microsoft.com/en-us/services/log-analytics/">Log Analytics</li>
+	  <li title="Cloud management process automation" dir="https://azure.microsoft.com/en-us/services/automation/">Automation</li>	
+	  <li title="Reliable server backup to the cloud" dir="https://azure.microsoft.com/en-us/services/backup/">Backup</li>	
+	  <li title="Orchestrate protection and recovery of the clouds" dir="https://azure.microsoft.com/en-us/services/site-recovery/">Site Recovery</li>	
+	  <li title="Run jobs on simple or complex recurring schedulers" dir="https://azure.microsoft.com/en-us/services/scheduler/">Scheduler</li>	
+	  <li title="Ensure application availability and data protection" dir="https://azure.microsoft.com/en-us/services/protection-recovery/">Protection & Recovery</li>	
+	  <li title="Centrally manage all automation and configuration assets" dir="https://azure.microsoft.com/en-us/services/automation-control/">Automation & Control</li>	
+	  <li title="Browser-based shell experience running in the cloud to help manage your Azure resources" dir="https://azure.microsoft.com/en-us/features/cloud-shell/">Cloud Shell</li>	
+	  <li title="Get personalized guidance and support for when issues in Azure services affect you" dir="https://azure.microsoft.com/en-us/features/service-health/">Azure Service Health</li>	
+	  <li title="Build reactive, event-driven apps with a fully managed event routing service" dir="https://azure.microsoft.com/en-us/services/event-grid/">Event Grid</li>	
+	  <li title="Manage your cloud spend with transparency and accuracy" dir="https://azure.microsoft.com/en-us/services/cost-management/">Cost Management</li>	
+	  <li title="Active control and governance at scale for your Azure resources" dir="https://azure.microsoft.com/en-us/services/azure-policy/">Azure Policy</li>	
+	</ul>	
+	</td>	
+	<td>	
+	<ul>	
+	  <li title="For applications running on Google Cloud Platform and Amazon Web Services." dir="https://cloud.google.com/logging/">STACKDRIVER LOGGING</li>
+	  <li title="Identify and understand your application errors." dir="https://cloud.google.com/error-reporting/">STACKDRIVER ERROR REPORTING</li>
+	  <li title="Find performance bottlenecks in production." dir="https://cloud.google.com/trace/">STACKDRIVER TRACE</li>
+	  <li title="Investigate your code’s behavior in production" dir="https://cloud.google.com/debugger/">STACKDRIVER DEBUGGER</li>
+	  <li title="Create and manage cloud resources with simple templates" dir="https://cloud.google.com/deployment-manager/">CLOUD DEPLOYMENT MANAGER</li>
+	  <li title="Your integrated Google Cloud Platform management console" dir="https://cloud.google.com/cloud-console/">CLOUD CONSOLE</li>
+	  <li title="Manage your infrastructure and applications from the command-line in any browser" dir="https://cloud.google.com/shell/">CLOUD SHELL</li>
+	  <li title="Programmatic interfaces for all Google Cloud Platform services" dir="https://cloud.google.com/apis/">CLOUD APIs</li>
+	  <li title="programmatically manage billing for your projects in the Google Cloud " dir="https://cloud.google.com/billing/docs/">CLOUD BILLING API</li>
+	</ul>	
+	</td>		  
+  </tr>
+  <tr>
+	<td><h3>Container</h3></td>
+	<td>
+	<ul>
+	  <li title="Container Management Service" dir="https://www.openstack.org/software/releases/ocata/components/zun">ZUN</li>
+	  <li title="Container Network plugin" dir="https://www.openstack.org/software/releases/ocata/components/kuryr">KURYR</li>
+	  <li title="Container Orchestration Engine Provisioning" dir="https://www.openstack.org/software/releases/ocata/components/magnum">MAGNUM</li>
+	  <li title="Container deployment" dir="https://www.openstack.org/software/releases/ocata/components/kolla">KOLLA</li>	  
+	</ul>	
+	</td>
+	<td>
+	<ul>
+	  <li title="Store and Retrieve Docker Images" dir="https://aws.amazon.com/ecr/">Amazon EC2 Container Registry</li>
+	  <li title="Run and Manage Docker Containers" dir="https://aws.amazon.com/ecs/">Amazon EC2 Container Service</li>
+	</ul>	
+	</td>
+	<td>
+	<ul>
+	  <li title="Scale and orchestrate container using Kubernetes, DC/OS or Docker Swarm" dir="https://azure.microsoft.com/en-us/services/container-service/">Container Service</li>
+	  <li title="Easily run containers with a single command" dir="https://azure.microsoft.com/en-us/services/container-instances/">Container Instances</li>
+	  <li title="Store and manage container images for all types of container deployments" dir="https://azure.microsoft.com/en-us/services/container-registry/">Container Registry</li>	  
+	  <li title="Develop and orchestrate containers on Windows or Linus" dir="https://azure.microsoft.com/en-us/services/service-fabric/">Service Fabric</li>	  	  
+    </ul>
+	</td>
+	<td>
+	<ul>
+	  <li title="Deploy, manage, and scale containerized applications, powered by Kubernetes" dir="https://cloud.google.com/container-engine/">CONTAINER ENGINE</li>
+	  <li title="Fast, private Docker image storage on Google Cloud Platform" dir="https://cloud.google.com/container-registry/">CONTAINER REGISTRY</li>
+	  <li title="Fast, consistent, reliable builds on Google Cloud Platform" dir="https://cloud.google.com/container-builder/">CONTAINER BUILDER</li>
+	</ul>
+	</td>
+  </tr>
+  <tr>
+    <td><h3>Big Data / Analysis</h3></td>
+    <td>
+	<ul>
+	  <li title="Big Data Processing Framework Provisioning" dir="https://www.openstack.org/software/releases/ocata/components/sahara">SAHARA</li>
+	</ul>	
+	</td>
+    <td>
+	<ul>
+	  <li title="Query Data in S3 using SQL" dir="https://aws.amazon.com/athena/">Amazon Athena</li>
+	  <li title="Run and Scale Apache Hadoop, Spark, HBase, Presto, Hive, and other Big Data Frameworks" dir="https://aws.amazon.com/emr/">Amazon EMR</li>
+	  <li title="Managed Search Service" dir="https://aws.amazon.com/cloudsearch/">Amazon CloudSearch</li>
+	  <li title="Run and Scale Elasticsearch clusters" dir="https://aws.amazon.com/elasticsearch-service/">Amazon Elasticsearch Service</li>
+	  <li title="Prepare and Load Data" dir="https://aws.amazon.com/glue/">AWS Glue</li>
+	</ul>	
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Hyperscale repository for big data analytic workloads" dir="https://azure.microsoft.com/en-us/services/data-lake-store/">Data Lake Store</li>
+	  <li title="Distributed analytics service built on Apache YARN" dir="https://azure.microsoft.com/en-us/services/data-lake-analytics/">Data Lake Analytics</li>
+	  <li title="Orchestrate and manage data transformation and movement" dir="https://azure.microsoft.com/en-us/services/data-factory/">Data Factory V1</li>
+	  <li title="Easily search, correlate, and analyze data from the cloud" dir="https://azure.microsoft.com/en-us/services/insight-analytics/">Insight & Analytics</li>
+	  <li title="Managed Open source Big Data analytics service for the enterprise" dir="https://azure.microsoft.com/en-us/services/hdinsight/">HDInsight</li>
+	  <li title="Real-time data stream processing from millions of IoT devices" dir="https://azure.microsoft.com/en-us/services/stream-analytics/">Stream Analytics</li>
+	  <li title="Intelligent bot service that scales on demand" dir="https://azure.microsoft.com/en-us/services/bot-service/">Azure Bot Service</li>
+	  <li title="Fully interactive, stunning data visualizations in your apps" dir="https://azure.microsoft.com/en-us/services/power-bi-embedded/">Power BI Embedded</li>
+	  <li title="Fully managed service that serves as a system of registration and system of discovery for enterprise data sources" dir="https://azure.microsoft.com/en-us/services/data-catalog/">Data Catalog</li>
+	  <li title="Collect, correlate and visualize all your machine data, such as event logs, network logs, performance data, and much more, from both your on-premises and cloud assets" dir="https://azure.microsoft.com/en-us/services/log-analytics/">Log Analytics</li>
+	  <li title="A feature of HDInsight.Apache Spark in the cloud for mission critical deployments" dir="https://azure.microsoft.com/en-us/services/hdinsight/apache-spark/">Apache Spark for Azure HDInsight</li>
+	  <li title="A feature of Cognitive Services.Easily evaluate sentiment and topics to understand what users want" dir="https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/">Text Analytics API</li>
+	  <li title="Enterprise grade analytics engine as a service" dir="https://azure.microsoft.com/en-us/services/analysis-services/">Azure Analysis Services</li>
+	  <li title="Transform your customer data into actionable insights" dir="https://azure.microsoft.com/en-us/services/customer-insights/">Dynamics 365 for Customer Insights</li>
+	  <li title="A feature of Cognitive Services.Overcome speech recognition barriers like speaking style, background noise, and vocabulary" dir="https://azure.microsoft.com/en-us/services/cognitive-services/custom-speech-service/">Custom Speech Service</li>
+	</ul>
+    </td>	  
+    <td>
+	<ul>
+	 <li title="Fully managed data import service for Google BigQuery" dir="https://cloud.google.com/bigquery/transfer/">GOOGLE BIGQUERY DATA TRANSFER SERVICE</li>
+	 <li title="A fast, economical and fully-managed enterprise data warehouse for large-scale data analytics" dir="https://cloud.google.com/bigquery/">BIGQUERY</li>
+	 <li title="Simplified stream and batch data processing, with equal reliability and expressiveness" dir="https://cloud.google.com/dataflow/">CLOUD DATAFLOW</li>
+	 <li title="A faster, easier, more cost-effective way to run Spark and Hadoop" dir="https://cloud.google.com/dataproc/">CLOUD DATAPROC</li>
+	 <li title="An easy to use interactive tool for data exploration, analysis, visualization and machine learning" dir="https://cloud.google.com/datalab/">CLOUD DATALAB</li>
+	 <li title="An easy to use interactive tool for data exploration, analysis, visualization and machine learning" dir="https://cloud.google.com/datalab/">CLOUD DATALAB</li>
+	 <li title="An intelligent cloud data service to visually explore, clean, and prepare data for analysis" dir="https://cloud.google.com/dataprep/">CLOUD DATAPREP</li>
+	 <li title="Ingest event streams from anywhere, at any scale, for simple, reliable, real-time stream analytics" dir="https://cloud.google.com/pubsub/">CLOUD PUB/SUB</li>
+	 <li title="Ask bigger questions by efficiently processing up to petabytes of genomic data" dir="https://cloud.google.com/genomics/">GOOGLE GENOMICS</li>
+	 <li title="Tell great data stories to support better business decisions" dir="https://cloud.google.com/data-studio/">GOOGLE DATA STUDIO</li>
+	</ul>
+    </td>	  	
+  </tr>
+  <tr>
+    <td><h3>DevOps Tools</h3></td>
+    <td>
+	<ul>
+	  <li title="Container deployment" dir="https://www.openstack.org/software/releases/ocata/components/kolla">KOLLA</li>	
+	  <li title="Deployment Service" dir="https://www.openstack.org/software/releases/ocata/components/tripleo">TRIPLEO</li>
+	  <li title="Chef cookbook for OpenStack" dir="https://www.openstack.org/software/releases/ocata/components/chef-openstack">CHEF</li>
+	  <li title="Juju Charms for OpenStack" dir="https://www.openstack.org/software/releases/ocata/components/openstack-charms">CHARMS</li>
+	  <li title="Ansible Playbook for OpenStack" dir="https://www.openstack.org/software/releases/ocata/components/openstackansible">ANSIBLE</li>
+	  <li title="Puppet Modules for OpenStack" dir="https://www.openstack.org/software/releases/ocata/components/puppet-openstack">PUPPET</li>
+	</ul>			
+	</td>
+    <td>
+	<ul>
+	  <li title="Automate Operations with Chef" dir="https://aws.amazon.com/opsworks/">AWS OpsWorks</li>
+	  <li title="Develop, build, and deploy applications" dir="https://aws.amazon.com/codestar/">AWS CodeStar</li>
+	  <li title="Source Control in Private Git Repositories" dir="https://aws.amazon.com/codecommit/">AWS CodeCommit</li>
+	  <li title="Build and Test Code" dir="https://aws.amazon.com/codebuild/">AWS CodeBuild</li>
+	  <li title="Automated Code Deployment" dir="https://aws.amazon.com/codedeploy/">AWS CodeDeploy</li>
+	  <li title="Continuous Integration and Continuous Delivery service" dir="https://aws.amazon.com/codepipeline/">AWS CodePipeline</li>
+	  <li title="Analysis & Debug Your Application" dir="https://aws.amazon.com/xray/">AWS X-Ray</li>
+	  <li title="Build, Deploy and Manage API" dir="https://aws.amazon.com/api-gateway/">Amazon API Gateway</li>
+	</ul>	
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Cloud-based application lifecycle management (ALM) solution" dir="https://azure.microsoft.com/en-us/services/visual-studio-team-services/">Visual Studio Team Services</li>
+	  <li title="Quickly create environments to deploy and test applications" dir="https://azure.microsoft.com/en-us/services/devtest-lab/">Azure DevTest Labs</li>	  
+	  <li title="Detect, triage, and diagnose issues in your web apps and services" dir="https://azure.microsoft.com/en-us/services/application-insights/">Application Insights</li>	  
+	  <li title="Publish APIs to developers, partners, and employees securely and at scale" dir="https://azure.microsoft.com/en-us/services/api-management/">API Management</li>	  
+	  <li title="Develop, distribute, and beta-test your mobile apps" dir="https://azure.microsoft.com/en-us/services/hockeyapp/">HockeyApp</li>	  
+	</ul>		
+	</td>			
+    <td>
+	<ul>	
+	  <li title="Command-line interface for Google Cloud Platform products and services" dir="https://cloud.google.com/sdk/">CLOUD SDK</li>
+	  <li title="Multiple private Git repositories hosted on Google Cloud Platform" dir="https://cloud.google.com/source-repositories/">CLOUD SOURCE REPOSITORIES</li>
+	  <li title="Debug production cloud applications right inside of IntelliJ" dir="https://cloud.google.com/intellij/">CLOUD TOOLS FOR INTELLIJ</li>
+	  <li title="Full cloud control from Windows PowerShell" dir="https://cloud.google.com/powershell/">CLOUD TOOLS FOR POWERSHELL</li>
+	  <li title="Deploy Visual Studio applications to Google Cloud Platform" dir="https://cloud.google.com/visual-studio/">CLOUD TOOLS FOR VISUAL STUDIO</li>
+	  <li title="Deploy Eclipse applications to Google Cloud Platform" dir="https://cloud.google.com/eclipse/docs/">CLOUD TOOLS FOR ECLIPSE</li>
+	  <li title="Gradle plugin provides tasks to build and deploy Google App Engine applications." dir="https://github.com/GoogleCloudPlatform/app-gradle-plugin">Google App Engine Gradle plugin</li>
+	  <li title="Maven plugin provides goals to build and deploy Google App Engine applications." dir="https://github.com/GoogleCloudPlatform/app-maven-plugin">Google App Engine Maven plugin</li>
+	  <li title="Test your app on devices hosted in a Google data center." dir="https://firebase.google.com/docs/test-lab/">Google Test Lab</li>
+	</ul>		
+	</td>				
+  </tr>   
+  <tr>
+    <td><h3>Artificial Intelligence + Cognitive Services</h3></td>
+    <td></td>
+	<td>
+	<ul>
+	  <li title="Build Voice and Text Chatbots" dir="https://aws.amazon.com/lex/">Amazon Lex</li>
+	  <li title="Turn text into lifelike speech" dir="https://aws.amazon.com/polly/">Amazon Polly</li>
+	  <li title="Deep learning-based image recognition" dir="https://aws.amazon.com/rekognition/">Amazon Rekognition</li>
+	  <li title="Machine Learning for Developers" dir="https://aws.amazon.com/amazon-ai/">Amazon Machine Learning</li>
+	  <li title="A Secure and Scalable Environment for Deep Learning on Amazon EC2" dir="https://aws.amazon.com/amazon-ai/amis/">AWS Deep Learning AMIs</li>
+	  <li title="Scalable, High-Performance Deep Learning" dir="https://aws.amazon.com/mxnet/">Apache MXNet on AWS</li>
+	  <li title="Common Deep Learning Framework" dir="https://aws.amazon.com/tensorflow/">TensorFlow on AWS</li>
+	</ul>		
+	</td>
+    <td>
+	<ul>	
+	  <li title="Design, test, operationalize, and manage predictive analytics solutions in the cloud" dir="https://azure.microsoft.com/en-us/services/machine-learning-studio/">Machine Learning Studio</li>
+	  <li title="Enable developers to easily add intelligent services, such as vision, speech, language" dir="https://azure.microsoft.com/en-us/services/cognitive-services/">Cognitive Services</li>
+	  <li title="Intelligent bot development service" dir="https://azure.microsoft.com/en-us/services/bot-service/">Azure Bot Service</li>
+	  <li title="Detect sentiment, key phrases, topics, and language from your text" dir="https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/">Text Analytics API</li>
+	  <li title="A feature of Cognitive Services.Predict and recommend items your customers want" dir="https://azure.microsoft.com/en-us/services/cognitive-services/recommendations/">Recommendations API</li>
+	  <li title="A feature of Cognitive Services.Tap into the wealth of academic content in the Microsoft Academic Graph" dir="https://azure.microsoft.com/en-us/services/cognitive-services/academic-knowledge/">Academic Knowledge API</li>
+	  <li title="A feature of Cognitive Services.Distill actionable information from images" dir="https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/">Computer Vision API</li>
+	  <li title="A feature of Cognitive Services.Automated image, text, and video moderation" dir="https://azure.microsoft.com/en-us/services/cognitive-services/content-moderator/">Content Moderator</li>
+	  <li title="A feature of Cognitive Services.Personalize user experiences with emotion recognition" dir="https://azure.microsoft.com/en-us/services/cognitive-services/emotion/">Emotion API</li>
+	  <li title="A feature of Cognitive Services.Detect, identify, analyze, organize, and tag faces in photos" dir="https://azure.microsoft.com/en-us/services/cognitive-services/face/">Face API</li>
+	  <li title="A feature of Cognitive Services.Convert speech to text and back again to understand user intent" dir="https://azure.microsoft.com/en-us/services/cognitive-services/speech/">Bing Speech API</li>
+	  <li title="A feature of Cognitive Services.Use the power of predictive language models trained on web-scale data" dir="https://azure.microsoft.com/en-us/services/cognitive-services/web-language-model/">Web Language Model API</li>
+	  <li title="A feature of Cognitive Services.Teach your apps to understand commands from your users" dir="https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/">Language Understanding Intelligent Service</li>
+	  <li title="A feature of Cognitive Services.Use speech to identify and authenticate individual speakers" dir="https://azure.microsoft.com/en-us/services/cognitive-services/speaker-recognition/">Speaker Recognition API</li>
+	  <li title="A feature of Cognitive Services.Overcome speech recognition barriers like speaking style, background noise, and vocabulary" dir="https://azure.microsoft.com/en-us/services/cognitive-services/custom-speech-service/">Custom Speech Service</li>
+	  <li title="A feature of Cognitive Services.Give your app intelligent autosuggest options for searches" dir="https://azure.microsoft.com/en-us/services/cognitive-services/autosuggest/">Bing Autosuggest API</li>
+	  <li title="A feature of Cognitive Services.Detect and correct spelling mistakes in your app" dir="https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/">Bing Spell Check API</li>
+	  <li title="A feature of Cognitive Services.Easily conduct real-time speech translation with a simple REST API call" dir="https://azure.microsoft.com/en-us/services/cognitive-services/translator-speech-api/">Translator Speech API</li>
+	  <li title="A feature of Cognitive Services.Easily conduct machine translation with a simple REST API call" dir="https://azure.microsoft.com/en-us/services/cognitive-services/translator-text-api/">Translator Text API</li>
+	  <li title="A feature of Cognitive Services.An easy-to-use, ad-free, commercial-grade search tool that lets you deliver the results you want" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-custom-search/">Bing Custom Search</li>		
+	  <li title="A feature of Cognitive Services.Enrich your experiences by identifying and augmenting entity information from the web" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-entity-search-api/">Bing Entity Search API</li>
+	  <li title="A feature of Cognitive Services.Get enhanced search details from billions of web documents" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/">Bing Web Search API</li>
+	  <li title="A feature of Cognitive Services.Search for videos and get comprehensive results" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-video-search-api/">Bing Video Search API</li>
+	  <li title="A feature of Cognitive Services.Search for images and get comprehensive results" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/">Bing Image Search API</li>
+	  <li title="A feature of Cognitive Services.Search for news and get comprehensive results" dir="https://azure.microsoft.com/en-us/services/cognitive-services/bing-news-search-api/">Bing News Search API</li>
+	  <li title="A feature of Cognitive Services.A cloud-based, contextual decision-making API that sharpens with experience" dir="https://azure.microsoft.com/en-us/services/cognitive-services/custom-decision-service/">Custom Decision Service</li>
+	  <li title="A feature of Cognitive Services.Distill information into conversational, easy-to-navigate answers" dir="https://azure.microsoft.com/en-us/services/cognitive-services/qna-maker/">QnA Maker API</li>
+	  <li title="A feature of Cognitive Services.Enable interactive search experiences over structured data via natural language inputs" dir="https://azure.microsoft.com/en-us/services/cognitive-services/knowledge-exploration-service/">Knowledge Exploration Service</li>
+	  <li title="A feature of Cognitive Services.Power your app's data links with named entity recognition and disambiguation" dir="https://azure.microsoft.com/en-us/services/cognitive-services/entity-linking-intelligence-service/">Entity Linking Intelligence Service API</li>
+	  <li title="A feature of Cognitive Services.Simplify complex language concepts and parse text with the Linguistic Analysis API" dir="https://azure.microsoft.com/en-us/services/cognitive-services/linguistic-analysis-api/">Linguistic Analysis API</li>
+	  <li title="A feature of Cognitive Services.Unlock video insights" dir="https://azure.microsoft.com/en-us/services/cognitive-services/video-indexer/">Video Indexer</li>
+	  <li title="A feature of Cognitive Services.Intelligent video processing" dir="https://azure.microsoft.com/en-us/services/cognitive-services/video-api/">Video API</li>
+	  <li title="A feature of Cognitive Services.Easily customize your own state-of-the-art computer vision models for your unique use case" dir="https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/">Custom Vision Service</li>
+	</ul>		
+	</td>				
+    <td>
+	<ul>	
+	  <li title="Machine Learning on any data, of any size" dir="https://cloud.google.com/ml-engine/">CLOUD MACHINE LEARNING ENGINE</li>
+	  <li title="Power your job site with machine learning" dir="https://cloud.google.com/job-discovery/">CLOUD JOB DISCOVERY</li>
+	  <li title="Derive insights from unstructured text using Google machine learning" dir="https://cloud.google.com/natural-language/">CLOUD NATURAL LANGUAGE API</li>
+	  <li title="Speech to text conversion powered by machine learning" dir="https://cloud.google.com/speech/">CLOUD SPEECH API</li>
+	  <li title="Dynamically translate between thousands of available language pairs" dir="https://cloud.google.com/translate/">CLOUD TRANSLATION API</li>
+	  <li title="Derive insight from images with our powerful Cloud Vision API" dir="https://cloud.google.com/vision/">CLOUD VISION API</li>
+	  <li title="Search and discover your media content with powerful Cloud Video Intelligence API" dir="https://cloud.google.com/video-intelligence/">CLOUD VIDEO INTELLIGENCE</li>
+	</ul>		
+	</td>					
+  </tr>
+  <tr>
+    <td><h3>Mobile</h3></td>
+    <td></td>
+    <td>
+	<ul>
+	  <li title="User Identity & App Data Sync" dir="https://aws.amazon.com/cognito/">Amazon Cognito</li>
+	  <li title="Build, Test and Monitor Apps" dir="https://aws.amazon.com/mobile/">AWS Mobile Hub</li>
+	  <li title="Push Notification for Mobile Apps" dir="https://aws.amazon.com/pinpoint/">Amazon Pinpoint</li>
+	  <li title="Mobile Software Development Kit" dir="https://aws.amazon.com/mobile/sdk/">AWS Mobile SDK</li>
+	  <li title="Test Android, FireOS and iOS Apps on Real Devices in the Cloud" dir="https://aws.amazon.com/device-farm/">AWS Device Farm</li>
+	</ul>		
+	</td>		
+    <td>
+	<ul>	
+	  <li title="Azure Mobile app" dir="https://azure.microsoft.com/en-us/features/azure-portal/mobile-app/">Azure Mobile app</li>
+	  <li title="Quickly and easily create enterprise-ready web and mobile apps" dir="https://azure.microsoft.com/en-us/services/app-service/">App Service</li>
+	  <li title="A feature of App Service.Build and host the backend for any mobile app" dir="https://azure.microsoft.com/en-us/services/app-service/mobile/">Mobile Apps</li>
+	  <li title="A feature of App Service.Automate the access and use of data across clouds without writing code" dir="https://azure.microsoft.com/en-us/services/logic-apps/">Logic Apps</li>
+	  <li title="A feature of App Service.Easily build and consume Cloud APIs" dir="https://azure.microsoft.com/en-us/services/app-service/api/">API Apps</li>	  
+	</ul>		
+	</td>		
+    <td>
+	<ul>		  
+	  <li title="Build scalable web and mobile backends in any language on Google’s infrastructure" dir="https://cloud.google.com/appengine/" >APP ENGINE</li>	  
+	  <li title="Manage Google Cloud Platform services from your Android or iOS device" dir="https://cloud.google.com/console-app/" >CLOUD CONSOLE MOBILE APP</li>	  
+	</ul>		
+	</td>			
+  </tr>
+  <tr>
+    <td><h3>Internet of Things</h3></td>
+    <td></td>
+    <td>
+	<ul>
+	  <li title="Connect Devices to the Cloud" dir="https://aws.amazon.com/iot/">AWS IoT Platform</li>
+	  <li title="Local Compute, Messaging and Sync for Devices" dir="https://aws.amazon.com/greengrass/">AWS Greengrass</li>
+	  <li title="Cloud Programmable Dash Button" dir="https://aws.amazon.com/iotbutton/">AWS IoT Button</li>
+	</ul>		
+	</td>	
+    <td>
+	<ul>	
+	  <li title="Connect, monitor, and control billions of IoT assets " dir="https://azure.microsoft.com/en-us/services/iot-hub/">IoT Hub</li>
+	  <li title="Extend intelligence from the cloud to edge devices" dir="https://azure.microsoft.com/en-us/campaigns/iot-edge/">IoT Edge</li>
+	  <li title="Real-time data stream processing from millions of IoT devices" dir="https://azure.microsoft.com/en-us/services/stream-analytics/">Stream Analytics</li>
+	  <li title="Instantly explore and analyze time-series data in IoT solutions" dir="https://azure.microsoft.com/en-us/services/time-series-insights/">Time Series Insights</li>
+	  <li title="Receive telemetry from millions of devices" dir="https://azure.microsoft.com/en-us/services/event-hubs/">Event Hubs</li>	  
+	</ul>		
+	</td>
+    <td>
+	<ul>	
+	  <li title="A fully managed service to easily and securely connect, manage, and ingest data from globally dispersed devices" dir="https://cloud.google.com/iot-core/">CLOUD IOT CORE</li>
+	</ul>		
+	</td>	
+  </tr>
+  <tr>
+    <td><h3>Other Services</h3></td>
+    <td>
+	<ul>
+	  <li title="Application Catalog" dir="https://www.openstack.org/software/releases/ocata/components/murano">MURANO</li>
+	</ul>		
+	</td>
+    <td>
+	<ul>
+	  <li title="Catalogs of IT services" dir="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</li>
+	  <li title="Real-Time Streaming" dir="https://aws.amazon.com/kinesis/">Amazon Kinesis</li>
+	  <li title="Fast Business Analysis Service" dir="https://quicksight.aws/">Amazon QuickSight</li>
+	  <li title="Scalable Media Transcoder" dir="https://aws.amazon.com/elastictranscoder/">Amazon Elastic Transcoder</li>
+	  <li title="Coordinate Distributed Application" dir="https://aws.amazon.com/step-functions/">AWS Step Functions</li>
+	  <li title="Cloud-based contact centre" dir="https://aws.amazon.com/connect/">Amazon Connect</li>
+	  <li title="Cost-effective dedicated game server hosting" dir="https://aws.amazon.com/gamelift/">Amazon GameLift</li>
+	  <li title="Free Cross-Platform 3D Game Engine" dir="https://aws.amazon.com/lumberyard/">Amazon Lumberyard</li>
+	  <li title="Frustration free meeting, video calls and chat" dir="https://chime.aws/">Amazon Chime</li>
+	  <li title="Enterprise Storage and Sharing Service" dir="https://aws.amazon.com/workdocs/">Amazon WorkDocs</li>
+	  <li title="Secure & Managed Business Email & Calendaring" dir="https://aws.amazon.com/workmail/">Amazon WorkMail</li>
+	  <li title="Desktop Computing Service" dir="https://aws.amazon.com/workspaces/">Amazon WorkSpaces</li>
+	  <li title="Stream desktop application securely to a browser" dir="https://aws.amazon.com/appstream2/">Amazon AppStream 2.0</li>
+	  <li title="AWS Marketplace" dir="https://aws.amazon.com/marketplace/">AWS Marketplace</li>
+	</ul>		
+	</td>
+    <td>
+	<ul>	
+	  <li title="Extend Azure on-premises and build innovative cloud hybrid applications" dir="https://azure.microsoft.com/en-us/overview/azure-stack/">Azure Stack</li>
+	  <li title="Cloud-based media solutions, including ingest, encoding, format conversion, content protection" dir="https://azure.microsoft.com/en-us/services/media-services/">Media Services</li>
+	  <li title="A feature of Media Services.Deliver content to virtually all devices with scale to meet business needs" dir="https://azure.microsoft.com/en-us/services/media-services/live-on-demand/">Live and On-Demand Streaming</li>
+	  <li title="A feature of Media Services.A single layer for all your playback needs" dir="https://azure.microsoft.com/en-us/services/media-services/media-player/">Azure Media Player</li>
+	  <li title="A feature of Media Services.Securely deliver content using AES, PlayReady, Widevine, and Fairplay" dir="https://azure.microsoft.com/en-us/services/media-services/content-protection/">Content Protection</li>
+	  <li title="A feature of Media Services.Uncover insights from video files with speech and vision services" dir="https://azure.microsoft.com/en-us/services/media-services/media-analytics/">Media Analytics</li>
+	  <li title="Fully-managed search as a serviceor web and mobile app development" dir="https://azure.microsoft.com/en-us/services/search/">Azure Search</li>
+	  <li title="Publish, manage, secure, and analyze your APIs in minutes" dir="https://azure.microsoft.com/en-us/services/api-management/">API Management</li>
+	</ul>		
+	</td>
+    <td>
+	<ul>	
+	  <li title="Develop, secure, deploy, and monitor your APIs everywhere" dir="https://cloud.google.com/apigee-api-management/">APIGEE API PLATFORM</li>
+	  <li title="Flexible, easy-to-use solution to realize value from APIs" dir="https://cloud.google.com/api-monetization/">APIGEE API MONETIZATION</li>
+	  <li title="Insight into operational and business metrics for APIs" dir="https://cloud.google.com/api-analytics/">APIGEE API ANALYTICS</li>
+	  <li title="Intelligent behavior detection to protect APIs from attacks" dir="https://cloud.google.com/apigee-sense/">APIGEE SENSE</li>
+	  <li title="Develop, deploy and manage APIs on any Google Cloud backend" dir="https://cloud.google.com/endpoints/">CLOUD ENDPOINTS</li>
+	</ul>		
+	</td>	
+  </tr>    
+</table>
+
+<div id="myModal" class="modal">
+   <iframe src="http://www.foxyform.com/form.php?id=878983&sec_hash=736c851e5d6" height="480px" width="100%" style="border:none;"></iframe>
+   <span id="close" class="close">&times;</span>   
+</div>
+
+<!-- Tooltip -->
+<div id="tooltip" class="tooltiptexthide">
+<span >Tooltip text</span>
+</div>
+<!--
+<div class="rating" id="rate">
+    <input type="radio" name="star" id="star1" checked="checked" />
+    <label for="star1"><div class="star"></div></label>
+    <input type="radio" name="star" id="star2" checked="checked"/>
+    <label for="star2"><div class="star"></div></label>
+    <input type="radio" name="star" id="star3" />
+    <label for="star3"><div class="star"></div></label>
+    <input type="radio" name="star" id="star4" />
+    <label for="star4"><div class="star"></div></label>
+    <input type="radio" name="star" id="star5" />
+    <label for="star5"><div class="star"></div></label>
+</div>
+-->
+
+<!-- Footer -->
+<footer id="footer">
+
+<!-- Menu -->
+  <ul class="menu">
+	<li title="Video Communication Technologies Ltd.">Copyright © Video Communication 2015, All rights reserved.</li>
+	<li id="contact" title="Please click for contact me" >Design by Yakov Liskoff</li>
+  </ul>
+
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
