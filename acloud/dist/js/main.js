@@ -2,7 +2,7 @@
 function openNav(x) {
   x.classList.toggle("change");
   var nav  = document.getElementById("mySidenav");
-  console.log(nav.style.width);
+  //console.log(nav.style.width);
   if ( nav.style.width == "0px")
 	   nav.style.width = "250px";	
   else	  
@@ -16,7 +16,7 @@ function closeNav() {
 
 function showTitle(elem) {
   var rect = elem.getBoundingClientRect();
-  console.log(rect.top, rect.right, rect.bottom, rect.left);
+  //console.log(rect.top, rect.right, rect.bottom, rect.left);
   var tiptext = document.getElementById("tooltip");
   tiptext.classList.remove("tooltiptexthide");
   tiptext.classList.add("tooltiptextshow");
