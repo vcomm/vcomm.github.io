@@ -1,6 +1,6 @@
 <template>
   <div class="video" ref="vmodule"
-    @click="pipVideo()"
+    @dblclick="pipVideo()"
     >
 <!--
     <ol class="hide" tabindex="0">
@@ -251,6 +251,5 @@ export default {
 .callicon {
     width: 32px;
     height: 32px;
-    background-image: url('~@/assets/phone.png');
 }
 </style>

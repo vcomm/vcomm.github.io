@@ -95,7 +95,7 @@ import VideoArea from '@/components/VideoArea'
 import SideMenu from '@/components/SideMenu'
 import availableColors from './colors'
 import comSignal from './comsock.js'
-import json from '../public/json/config.json'
+import json from '../json/config.json'
 
 
 export default {
@@ -108,23 +108,7 @@ export default {
     return {
       contact: undefined,
       title: 'Lobby',
-      participants: [/*
-        {
-            "id": "Assistant",
-            "name": "Cloud Personal Assistant AI",
-            "imageUrl": "https://vcomm.github.io/cloudnav/images/eyes-on.png"  
-        },
-        {
-          "id": "Sales",
-          "name": "Cloud Navigator Sales Consultant",
-          "imageUrl": "https://vcomm.github.io/cloudnav/images/logo.jpg"
-        },
-        {
-          "id": "Support",
-          "name": "Cloud Navigator Techical Support",
-          "imageUrl": "https://avatars3.githubusercontent.com/u/37018832?s=200&v=4"
-        }*/
-      ],
+      participants: [ ],
       titleImageUrl: 'https://vcomm.github.io/cloudnav/images/eyes-on.png',
       messageList: [
           { type: 'text', author: `Sales`, data: { text: json.welcome } }
@@ -140,7 +124,8 @@ export default {
       userIsTyping: false,
       comChannel: null,
       isVideo: false,
-      inCall: false
+      inCall: false,
+      locStream: undefined,
     }
   },
   created() {
@@ -164,28 +149,47 @@ export default {
           }
       }
     },
+    callConnect() {
+      if (this.comChannel) {
+          if (!this.inCall) {
+              this.isVideo = true
+              this.inCall = true         
+          }
+      }
+    },
     callOff() {
       if (this.comChannel) {
           if (this.inCall) {
               this.comChannel.hangUpPeer(this.contact)
               this.inCall = false
               this.isVideo = false
-//              this.stopUserMedia()
+              this.stopUserMedia()
           }    
       }  
     },
+    callClear() {
+      if (this.comChannel) {
+          if (this.inCall) {
+              this.inCall = false
+              this.isVideo = false
+              this.stopUserMedia()
+          }    
+      }        
+    },
     stopUserMedia() {
-      const locStream = document.querySelector('#localVideo').srcObject
-      if (locStream) {
-          locStream.getTracks().forEach((track)=> track.stop() )
+      if (this.locStream) {
+          this.locStream.getTracks().forEach((track)=> track.stop() )
+          this.locStream = undefined
       }
-      document.querySelector('#localVideo').srcObject = null
+//      document.querySelector('#localVideo').srcObject = null
     },
     videoShow() {
       this.isVideo = !this.isVideo
       console.log(`Show video: ${this.isVideo}`);
     },
     createChannel() {
+      console.log(`Private Peer Server:: `,location.origin);
+
       const self = this
       const uid = (json.type === 'super') ? json.id : json.id+Math.floor(Math.random()*2**18).toString(36).padStart(4,0)
       this.comChannel = new comSignal(uid, json.peer
@@ -193,10 +197,18 @@ export default {
           data: (data) => {
             this.newMessagesCount = this.isChatOpen ? this.newMessagesCount : this.newMessagesCount + 1
             this.onMessageWasSent(data)
+            if (data.data.cmd === 'pickUp')
+                this.callConnect()
+            if (data.data.cmd === 'hangUp')
+                this.callClear()
           },
           call: (call,type) => {
             console.log(`Call ${type} to peer:`,call)
-            this.isVideo = true
+            if (this.contact === undefined && 
+                type === 'answer') {
+                this.contact = call.peer
+                this.isVideo = true
+            }
           },
           peers: (list) => {
             console.log('Update connection peers',list)
@@ -206,7 +218,8 @@ export default {
           },
           stream: (stream,dir) => {
             console.log(`${dir} peer stream:`,stream)
-            this.isVideo = true
+//            this.isVideo = true
+            if (dir === 'localVideo') this.locStream = stream
             document.querySelector(`#${dir}`).srcObject = stream;
           }
         }
@@ -254,11 +267,7 @@ export default {
           return
       } else if(this.contact === undefined && message.author !== 'me') {
           this.contact = message.author
-          if (message.data.text === 'Request media connection...')
-              this.callOn()
-      } else if (message.author !== 'me' && 
-                 message.data.text === 'HangUp media connection...')
-                 this.callOff()
+      } 
       this.messageList = [ ...this.messageList, message ]
     },
     openChat () {

@@ -9,11 +9,11 @@ export default class comSignal extends Peer {
         super(uid,cfg)
         this.connecters = {}
         this.constraints = {
-            audio: /*{
+            audio: {
                 echoCancellation: true,
                 noiseSuppression: true, 
                 autoGainControl: false
-            }*/false,
+            },
             video: {
                 width: { min: 320, ideal: 1280, max: 1920 },
                 height: { min: 240, ideal: 720, max: 1080 }
@@ -59,6 +59,8 @@ export default class comSignal extends Peer {
         });
         // Handle incoming voice/video connection
         this.on('call', (call) => {
+            if (!this.connecters.hasOwnProperty(call.peer)) 
+                this.connecters[call.peer] = {}
             navigator.mediaDevices.getUserMedia(this.constraints)
             .then((stream) => {
                 this.peerNotify['stream'](stream,'localVideo');
@@ -138,11 +140,23 @@ export default class comSignal extends Peer {
     hangUpPeer(peerId) {
         console.log(`HangUp ${peerId} peer`);
         if (this.connecters.hasOwnProperty(peerId)) {
-            this.connecters[peerId].conn.send({
-                author: this.id,
-                type: 'text',
-                data: { text: 'HangUp media connection...' }
-            })
+            if (this.connecters[peerId].conn) {
+                this.connecters[peerId].conn.send({
+                    author: this.id,
+                    type: 'text',
+                    data: { cmd: 'hangUp', text: 'HangUp media connection...' }
+                })
+            } else {
+                this.connToPeer(peerId)
+                .then((conn) => {
+                    this.connecters[peerId].conn = conn     
+                    this.connecters[peerId].conn.send({
+                        author: this.id,
+                        type: 'text',
+                        data: { cmd: 'hangUp', text: 'HangUp media connection...' }
+                    })                                  
+                });                
+            }
             this.connecters[peerId].call.close()
         }
     }
@@ -151,7 +165,7 @@ export default class comSignal extends Peer {
         conn.send({
             author: this.id,
             type: 'text',
-            data: { text: 'Request media connection...' }
+            data: { cmd: 'pickUp', text: 'Request media connection...' }
         })
         navigator.mediaDevices.getUserMedia(this.constraints)
         .then((stream) => {
