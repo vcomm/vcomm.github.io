@@ -3,10 +3,10 @@
     "type": "master", 
     "peer": {
         "key": "peerjs",
-        "host": "vcpeer.herokuapp.com",
+        "host": "https://peerjs.com",
         "port": 443,
         "debug": 1,
-        "path": "/myapp",
+        "path": "/peerserver",
         "config": { 
             "iceServers": [
                 { "url": "stun:stun01.sipphone.com" },
